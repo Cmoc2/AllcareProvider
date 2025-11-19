@@ -61,7 +61,18 @@ def convert_and_process_reports(source_folder, destination_folder):
                         new_filename = filename.rsplit('.', 1)[0] + '.xlsx'
                         destination_file = os.path.join(patient_dashboard_destination_folder, new_filename)
                         df.to_excel(destination_file, sheet_name='Patient Dashboard - Active', index=False)
-                        os.remove(source_file)
+                        # Confirm successful write
+                        if os.path.exists(destination_file):
+                            try:
+                                # Try reading the new file to confirm integrity
+                                pd.read_excel(destination_file)
+                                os.remove(source_file)
+                                print(f"Converted and renamed sheet to Active: {new_filename}")
+                            except Exception as e:
+                                print(f"File created but could not be read back: {destination_file}. Reason: {e}")
+                        else:
+                            print(f"Failed to create {destination_file}. Original file not deleted.")
+
                         print(f"Converted and renamed sheet to Active: {new_filename}")
                     except Exception as e:
                         print(f"Failed to convert {filename}. Reason: {e}")
@@ -72,8 +83,18 @@ def convert_and_process_reports(source_folder, destination_folder):
                         new_filename = filename.rsplit('.', 1)[0] + '.xlsx'
                         destination_file = os.path.join(destination_folder, new_filename)
                         df.to_excel(destination_file, index=False)
-                        os.remove(source_file)
-                        print(f"Converted and moved: {new_filename}")
+                        # Confirm successful write
+                        if os.path.exists(destination_file):
+                            try:
+                                # Try reading the new file to confirm integrity
+                                pd.read_excel(destination_file)
+                                os.remove(source_file)
+                                print(f"Converted and renamed sheet to Active: {new_filename}")
+                            except Exception as e:
+                                print(f"File created but could not be read back: {destination_file}. Reason: {e}")
+                        else:
+                            print(f"Failed to create {destination_file}. Original file not deleted.")
+
                     except Exception as e:
                         print(f"Failed to convert {filename}. Reason: {e}")
    
@@ -86,9 +107,9 @@ def convert_and_process_reports(source_folder, destination_folder):
 """
 #Display Message to select a File.
 response = tkinter.messagebox.askyesno(title="Process .xls Files", message="This script will process all xls files in the downloads folder:\n\n- Process Patient Dashboard\n- Process and move Visit Reports\n\nDo you wish to continue?")
+source_folder = 'C:/Users/ChristianOrtiz/Downloads'
+destination_folder = 'C:/Users/ChristianOrtiz/Documents/Reports/Report Data/Excel Concat'
+patient_dashboard_destination_folder = 'C:/Users/ChristianOrtiz/Downloads'
 
 if response:
-    source_folder = 'C:/Users/ChristianOrtiz/Downloads'
-    destination_folder = 'C:/Users/ChristianOrtiz/Documents/Reports/Report Data/Excel Concat'
-    patient_dashboard_destination_folder = 'C:/Users/ChristianOrtiz/Downloads'
     convert_and_process_reports(source_folder, destination_folder)
