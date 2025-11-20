@@ -13,7 +13,7 @@ from time import sleep
 import tkinter.messagebox
 from tkinter import filedialog
 
-expiration_date = datetime(2025, 11, 31)
+expiration_date = datetime(2025, 11, 28)
 if datetime.now() > expiration_date:
     tkinter.messagebox.showinfo(title="Runtime Error", message="Line 17.")
     raise RuntimeError("Runtime Error: Line 17.")
