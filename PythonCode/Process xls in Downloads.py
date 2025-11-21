@@ -68,6 +68,7 @@ def convert_and_process_reports(source_folder, destination_folder):
                                 pd.read_excel(destination_file)
                                 os.remove(source_file)
                                 print(f"Converted and renamed sheet to Active: {new_filename}")
+                                print(f"Deleted {filename}")
                             except Exception as e:
                                 print(f"File created but could not be read back: {destination_file}. Reason: {e}")
                         else:
@@ -77,12 +78,12 @@ def convert_and_process_reports(source_folder, destination_folder):
                     except Exception as e:
                         print(f"Failed to convert {filename}. Reason: {e}")
                 #Path B: Patient Dashboard - Active
-                if "Active" in filename:
+                elif "Active" in filename:
                     try:
-                        df = pd.read_excel(source_file)
+                        df = pd.read_excel(source_file, sheet_name='Patient Dashboard - Active', engine='xlrd')
                         new_filename = filename.rsplit('.', 1)[0] + '.xlsx'
-                        destination_file = os.path.join(destination_folder, new_filename)
-                        df.to_excel(destination_file, index=False)
+                        destination_file = os.path.join(patient_dashboard_destination_folder, new_filename)
+                        df.to_excel(destination_file, sheet_name='Patient Dashboard - Active', index=False)
                         # Confirm successful write
                         if os.path.exists(destination_file):
                             try:
@@ -90,6 +91,7 @@ def convert_and_process_reports(source_folder, destination_folder):
                                 pd.read_excel(destination_file)
                                 os.remove(source_file)
                                 print(f"Converted and renamed sheet to Active: {new_filename}")
+                                print(f"Deleted {filename}")
                             except Exception as e:
                                 print(f"File created but could not be read back: {destination_file}. Reason: {e}")
                         else:
@@ -113,3 +115,4 @@ patient_dashboard_destination_folder = 'C:/Users/ChristianOrtiz/Downloads'
 
 if response:
     convert_and_process_reports(source_folder, destination_folder)
+    wait = input("Press Enter to continue.")
