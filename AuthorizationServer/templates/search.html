@@ -1,0 +1,55 @@
+<!--
+# -*- coding: utf-8 -*-
+
+Created on Tue Nov  4 14:58:20 2025
+
+@author: ChristianOrtiz
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <form action="/" method="get" >
+        <button type="submit"> Home </button>
+    </form>
+    
+    <h1>Search Results</h1>
+    <table border="1">
+        <tr>
+            <th>Transaction ID</th>
+            <th>Patient Name</th>
+            <th>MRN</th>
+            <th>Authorization #</th>
+            <th>Visit Count</th>
+            <th>SOC Date</th>
+            <th>Request Date</th>
+            <th>Approved Date</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>      
+            <td>
+                <form action="/update/{{ row[0] }}" method="get" >
+                <button type="submit">Update</button>
+                </form>
+                <form action="/summary" method="get" >
+                    <input type="hidden" name="mrn" value="{{ row[2] }}">
+                    <button type="submit"> Summary </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

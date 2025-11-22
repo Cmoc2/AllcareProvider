@@ -1,0 +1,47 @@
+<!--
+-*- coding: utf-8 -*-
+
+Created on Tue Nov  4 14:56:29 2025
+
+@author: ChristianOrtiz
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Authorization Tracker</title>
+</head>
+<body>
+    <h1>Add Authorization</h1>
+    <form action="/add" method="post">
+	<label for="patient_name">Patient Name:</label><br>
+        <input name="patient_name" placeholder="Patient Name" required><br>
+	<label for="mrn_number">myUnity Number:</label><br>
+        <input name="mrn_number" placeholder="MRN Number" required><br>
+	<label for="Authorization Number"></label><br>
+        <input name="authorization_number" placeholder="Authorization #" required><br>
+	<label for="visit_count">Visit Count</label><br>
+        <input name="visit_count" placeholder="Visit Count" type="number"><br>
+	<label for="soc_date">Start of Care Date:</label><br>
+        <input name="soc_date" placeholder="SOC Date" type="date"><br>
+	<label for="request_date">Request Date:</label><br>
+        <input name="request_date" placeholder="Request Date" type="date"><br>
+	<label for="approved_date">Kaiser Response Date</label><br>
+        <input name="approved_date" placeholder="Approved Date" type="date"><br>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Search Authorizations</h2>
+    <form action="/search"'>
+        <input name="mrn" placeholder="Enter MRN Number">
+        <button type="submit">Search</button>
+    </form>
+    
+    <h2>Patient Summary</h2>
+    <form action="/summary">
+        <input name="mrn" placeholder="Enter MRN Number">
+        <button type="submit">Search</button>
+    </form>
+    
+</body>
+</html>
