@@ -73,8 +73,6 @@ def convert_and_process_reports(source_folder, destination_folder):
                                 print(f"File created but could not be read back: {destination_file}. Reason: {e}")
                         else:
                             print(f"Failed to create {destination_file}. Original file not deleted.")
-
-                        print(f"Converted and renamed sheet to Active: {new_filename}")
                     except Exception as e:
                         print(f"Failed to convert {filename}. Reason: {e}")
                 #Path B: Patient Dashboard - Active
