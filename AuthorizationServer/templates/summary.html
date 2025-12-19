@@ -20,13 +20,16 @@ Created on Tue Nov  4 14:58:20 2025
     <table border="1">
         <tr>
             <th>SOC Date</th>
-            <th>Visit Count</th>
+            <th>Patient Name</th>
             <th>MRN</th>
             <th>Authorization #</th>
-            <th>Visit Count</th>
-            <th>SOC Date</th>
-            <th>Request Date</th>
-            <th>Approved Date</th>
+            <th>RN Auth Count</th>
+            <th>LVN Auth Count</th>
+            <th>PT Auth Count</th>
+            <th>OT Auth Count</th>
+            <th>ST Auth Count</th>
+            <th>MSW Auth Count</th>
+            <th>HHA Auth Count</th>
         </tr>
         {% for row in rows %}
         <tr>
@@ -38,6 +41,9 @@ Created on Tue Nov  4 14:58:20 2025
             <td>{{ row[5] }}</td>
             <td>{{ row[6] }}</td>
             <td>{{ row[7] }}</td>
+            <td>{{ row[8] }}</td>
+            <td>{{ row[9] }}</td>
+            <td>{{ row[10] }}</td>
         </tr>
         {% endfor %}
     </table>

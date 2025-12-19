@@ -33,7 +33,13 @@ def add_authorization():
         request.form['patient_name'],
         request.form['mrn_number'],
         request.form['authorization_number'],
-        request.form['visit_count'],
+        request.form['RN_visit_count'],
+        request.form['LVN_visit_count'],
+        request.form['PT_visit_count'],
+        request.form['OT_visit_count'],
+        request.form['ST_visit_count'],
+        request.form['MSW_visit_count'],
+        request.form['HHA_visit_count'],
         request.form['soc_date'],
         request.form['request_date'],
         request.form['approved_date']
@@ -42,8 +48,8 @@ def add_authorization():
     db = get_db()
     cursor = db.cursor()
     cursor.execute('''
-        INSERT INTO authorizations (patient_name, mrn_number, authorization_number, visit_count, soc_date, request_date, approved_date)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO authorizations (patient_name, mrn_number, authorization_number, RN_visit_count, LVN_visit_count, PT_visit_count, OT_visit_count, ST_visit_count, MSW_visit_count, HHA_visit_count,soc_date, request_date, approved_date)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ''', data)
     db.commit()
 
@@ -69,7 +75,7 @@ def summary():
     patient_info = cursor.fetchone()  # (patient_name, mrn_number)
 
     # Get summary grouped by SOC date
-    cursor.execute('SELECT soc_date, SUM(visit_count), patient_name, mrn_number FROM authorizations WHERE mrn_number = ? GROUP BY soc_date', (mrn,))
+    cursor.execute('SELECT soc_date, patient_name, mrn_number, authorization_number, SUM(RN_visit_count), SUM(LVN_visit_count), SUM(PT_visit_count), SUM(OT_visit_count), SUM(ST_visit_count), SUM(MSW_visit_count), SUM(HHA_visit_count) FROM authorizations WHERE mrn_number = ? GROUP BY soc_date', (mrn,))
     rows = cursor.fetchall()
     return render_template('summary.html', rows=rows, patient_info=patient_info)
 

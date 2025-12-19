@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\ChristianOrtiz\Documents\Database\AuthorizationServer\.venv"
+VIRTUAL_ENV="C:\Users\ChristianOrtiz\Documents\GitHub\AllcareProvider\AuthorizationServer\.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
