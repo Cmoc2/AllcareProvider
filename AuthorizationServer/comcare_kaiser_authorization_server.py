@@ -61,8 +61,9 @@ def search():
     db = get_db()
     cursor = db.cursor()
     cursor.execute('SELECT * FROM authorizations WHERE mrn_number = ?', (mrn,))
+    headers = [col[0] for col in cursor.description]
     rows = cursor.fetchall()
-    return render_template('search.html', rows=rows)
+    return render_template('search.html', rows=rows, headers = headers)
 
 @app.route('/summary', methods=['GET'])
 def summary():
