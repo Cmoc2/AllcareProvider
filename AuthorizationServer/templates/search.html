@@ -20,14 +20,9 @@ Created on Tue Nov  4 14:58:20 2025
     <h1>Search Results</h1>
     <table border="1">
         <tr>
-            <th>Transaction ID</th>
-            <th>Patient Name</th>
-            <th>MRN</th>
-            <th>Authorization #</th>
-            <th>Visit Count</th>
-            <th>SOC Date</th>
-            <th>Request Date</th>
-            <th>Approved Date</th>
+            {% for header in headers %}
+            <td>{{ header }}</td>
+            {% endfor %}
         </tr>
         {% for row in rows %}
         <tr>
