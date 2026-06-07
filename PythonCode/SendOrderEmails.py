@@ -51,6 +51,16 @@ def send_email_with_files(source_folder, email_mapping, sender_email, app_passwo
                 msg['From'] = sender_email
                 msg['To'] = recipient_email
                 msg['Subject'] = subject
+                #send to multiple recipients, options: 
+                #chelsea.nunez@allcareprovider.com
+                #maria.nicolas@allcareprovider.com
+                cc_value = ''   
+                
+                if cc_value == '':
+                    recipients = msg['To'].split(',')
+                else:
+                    msg['CC'] = cc_value
+                    recipients = msg['To'].split(',') + msg['CC'].split(',')
 
                 # Attach the file
                 attachment = MIMEBase('application', 'octet-stream')
@@ -65,8 +75,8 @@ def send_email_with_files(source_folder, email_mapping, sender_email, app_passwo
                     with smtplib.SMTP('smtp.office365.com', 587) as server:
                         server.starttls()
                         server.login(sender_email, app_password)
-                        server.sendmail(sender_email, recipient_email, msg.as_string())
-                        print(f'Email sent successfully to {recipient_email} for file {filename}')
+                        server.sendmail(sender_email, recipients, msg.as_string())
+                        print(f'Email sent successfully to {recipients} for file {filename}')
                         
                         # Move the file to the sent folder
                         shutil.move(file_path, os.path.join(sent_folder, filename))

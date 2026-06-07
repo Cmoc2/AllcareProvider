@@ -1,0 +1,1 @@
+PyInstaller --onefile --windowed --collect-all=pandas --collect-all numpy --hidden-import=openpyxl --collect-all=xlrd "Pending Visit Notes Counter.py"

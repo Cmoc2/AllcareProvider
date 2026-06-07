@@ -36,7 +36,7 @@ def convert_and_process_reports(source_folder, destination_folder):
             # If it's an .xls file, convert to .xlsx
             if filename.lower().endswith('.xls'):
                 try:
-                    df = pd.read_excel(source_file)
+                    df = pd.read_excel(source_file, dtype=str)
                     new_filename = filename.rsplit('.', 1)[0] + '.xlsx'
                     destination_file = os.path.join(destination_folder, new_filename)
                     df.to_excel(destination_file, index=False)
@@ -106,7 +106,7 @@ def convert_and_process_reports(source_folder, destination_folder):
     Do you wish to continue?
 """
 #Display Message to select a File.
-response = tkinter.messagebox.askyesno(title="Process .xls Files", message="This script will process all xls files in the downloads folder:\n\n- Process Patient Dashboard\n- Process and move Visit Reports\n\nDo you wish to continue?")
+response = tkinter.messagebox.askyesno(title="Process .xls Files", message="This script will process all xls files in the downloads folder:\n\n- Process Patient Dashboard\n- Process and move Visit Reports\n- Delete files in Excel Concat Folder\n\nDo you wish to continue?")
 source_folder = 'C:/Users/ChristianOrtiz/Downloads'
 destination_folder = 'C:/Users/ChristianOrtiz/Documents/Reports/Report Data/Excel Concat'
 patient_dashboard_destination_folder = 'C:/Users/ChristianOrtiz/Downloads'
