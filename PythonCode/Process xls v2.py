@@ -16,13 +16,11 @@ def _read_xls_as_df(path, sheet_name=None):
     Reads an .xls file with:
     - First 5 rows removed
     - Header set to row 6 (0-indexed header=5)
-    - Drops fully empty columns and rows
     """
     try:
         read_target = sheet_name if sheet_name is not None else 0
         df = pd.read_excel(path, sheet_name=read_target, engine='xlrd', header=5)
         df.columns = [str(c).strip() for c in df.columns]
-        df = df.dropna(how='all').dropna(axis=1, how='all')
         return df
     except Exception as e:
         print(f"Failed to read {os.path.basename(path)}. Reason: {e}")
@@ -36,9 +34,9 @@ def convert_and_process_reports(
     visit_reports_output_filename="Combined_Visit_Reports.xlsx",
     delete_sources=False,  # <-- added flag
 ):
-    expiration_date = datetime(2025, 12, 28)
+    expiration_date = datetime(2026, 2, 28)
     if datetime.now() > expiration_date:
-        tkinter.messagebox.showinfo(title="Runtime Error", message="Line 17.")
+        tkinter.messagebox.showinfo(title="Runtime Error", message="Line 21.")
         raise RuntimeError("Runtime Error: Line 21.")
 
     # Ensure the destination folders exist
@@ -191,7 +189,7 @@ if __name__ == "__main__":
         tkinter.messagebox.showinfo(title="Folder Select", message="Select the folder of .xls files to process.")
         source_folder = filedialog.askdirectory(title='Select source folder')
 
-        tkinter.messagebox.showinfo(title="Folder Select", message="Select the destination folder for the combined Visit Reports .xlsx.")
+        tkinter.messagebox.showinfo(title="Folder Select", message="Select the destination folder for the combined Visit Reports .xlsx. WARNING: Everything in this folder will be deleted.")
         destination_folder = filedialog.askdirectory(title='Select destination folder')
 
         tkinter.messagebox.showinfo(title="Folder Select", message="Select the destination folder for Patient Dashboard .xlsx files.")
