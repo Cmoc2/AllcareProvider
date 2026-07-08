@@ -34,7 +34,7 @@ def convert_and_process_reports(
     visit_reports_output_filename="Combined_Visit_Reports.xlsx",
     delete_sources=False,  # <-- added flag
 ):
-    expiration_date = datetime(2026, 2, 28)
+    expiration_date = datetime(2026, 7, 28)
     if datetime.now() > expiration_date:
         tkinter.messagebox.showinfo(title="Runtime Error", message="Line 21.")
         raise RuntimeError("Runtime Error: Line 21.")
@@ -127,7 +127,7 @@ def convert_and_process_reports(
         output_path = os.path.join(destination_folder, visit_reports_output_filename)
         try:
             with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
-                combined_df.to_excel(writer, sheet_name='Visit Reports', index=False)
+                combined_df.to_excel(writer, sheet_name='Visit Report', index=False)
 
             tkinter.messagebox.showinfo(
                 title="Success",

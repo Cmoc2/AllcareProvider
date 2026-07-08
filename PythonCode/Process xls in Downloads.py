@@ -39,7 +39,7 @@ def convert_and_process_reports(source_folder, destination_folder):
                     df = pd.read_excel(source_file, dtype=str)
                     new_filename = filename.rsplit('.', 1)[0] + '.xlsx'
                     destination_file = os.path.join(destination_folder, new_filename)
-                    df.to_excel(destination_file, index=False)
+                    df.to_excel(destination_file, sheet_name='Visit Report', index=False)
                     os.remove(source_file)
                     print(f"Converted and moved: {new_filename}")
                 except Exception as e:
