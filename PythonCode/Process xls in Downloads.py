@@ -102,14 +102,18 @@ def convert_and_process_reports(source_folder, destination_folder):
     Give a warning on what it does:
     This script will process all xls files in the downloads folder:
     - Process Patient Dashboard xls
-    - Process and move Visit Reports
+    - Delete files in Excel Concat Folder
+    - Process and move Visit Reports to .\Documents\Reports\Report Data\Excel Concat
+
     Do you wish to continue?
 """
 #Display Message to select a File.
 response = tkinter.messagebox.askyesno(title="Process .xls Files", message="This script will process all xls files in the downloads folder:\n\n- Process Patient Dashboard\n- Process and move Visit Reports\n- Delete files in Excel Concat Folder\n\nDo you wish to continue?")
-source_folder = 'C:/Users/ChristianOrtiz/Downloads'
-destination_folder = 'C:/Users/ChristianOrtiz/Documents/Reports/Report Data/Excel Concat'
-patient_dashboard_destination_folder = 'C:/Users/ChristianOrtiz/Downloads'
+
+#Source location should be relative to the user. USERPROFILE
+source_folder = os.getenv("USERPROFILE") + '\\Downloads' 
+destination_folder = os.getenv("USERPROFILE") + '\\Documents\\Reports\\Report Data\\Excel Concat'
+patient_dashboard_destination_folder = os.getenv("USERPROFILE") + '\\Downloads'
 
 if response:
     convert_and_process_reports(source_folder, destination_folder)
