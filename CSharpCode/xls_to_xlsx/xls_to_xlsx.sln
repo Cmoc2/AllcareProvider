@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xls_to_xlsx", "xls_to_xlsx.csproj", "{4C6814F9-3C2B-45E8-81E2-CC536B5BE60D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendOrdersViaEmail", "..\SendOrdersViaEmail\SendOrdersViaEmail.csproj", "{04F74CDE-2FC5-4912-91A5-82D60A73C70D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{4C6814F9-3C2B-45E8-81E2-CC536B5BE60D}.Release|x64.Build.0 = Release|Any CPU
 		{4C6814F9-3C2B-45E8-81E2-CC536B5BE60D}.Release|x86.ActiveCfg = Release|Any CPU
 		{4C6814F9-3C2B-45E8-81E2-CC536B5BE60D}.Release|x86.Build.0 = Release|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Debug|x64.Build.0 = Debug|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Debug|x86.Build.0 = Debug|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Release|x64.ActiveCfg = Release|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Release|x64.Build.0 = Release|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Release|x86.ActiveCfg = Release|Any CPU
+		{04F74CDE-2FC5-4912-91A5-82D60A73C70D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

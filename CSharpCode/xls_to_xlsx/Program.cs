@@ -5,11 +5,11 @@ using Microsoft.VisualBasic.FileIO;
 using NPOI.HSSF.UserModel;
 using NPOI.XSSF.UserModel;
 
-string directoryPath = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\Documents\Automations\xlsInput\");
+string directoryPath = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\Documents\Automations\xls_to_xlsx\xlsInput\");
 //output directory path
 Console.WriteLine($"Monitoring directory: {directoryPath}");
 //set output directory path
-string outputDirectoryPath = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\Documents\Automations\xlsOutput\");
+string outputDirectoryPath = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\Documents\Automations\xls_to_xlsx\xlsOutput\");
 Console.WriteLine($"Output directory: {outputDirectoryPath}");
 
 //if directories do not exist, create it:

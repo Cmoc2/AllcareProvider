@@ -1,0 +1,15 @@
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\bin\Debug\net10.0\SendOrdersViaEmail.exe
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\bin\Debug\net10.0\SendOrdersViaEmail.deps.json
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\bin\Debug\net10.0\SendOrdersViaEmail.runtimeconfig.json
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\bin\Debug\net10.0\SendOrdersViaEmail.dll
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\bin\Debug\net10.0\SendOrdersViaEmail.pdb
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\obj\Debug\net10.0\SendOrdersViaEmail.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\obj\Debug\net10.0\SendOrdersViaEmail.AssemblyInfoInputs.cache
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\obj\Debug\net10.0\SendOrdersViaEmail.AssemblyInfo.cs
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\obj\Debug\net10.0\SendOrdersViaEmail.csproj.CoreCompileInputs.cache
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\obj\Debug\net10.0\SendOrdersViaEmail.sourcelink.json
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\obj\Debug\net10.0\SendOrdersViaEmail.dll
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\obj\Debug\net10.0\refint\SendOrdersViaEmail.dll
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\obj\Debug\net10.0\SendOrdersViaEmail.pdb
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\obj\Debug\net10.0\SendOrdersViaEmail.genruntimeconfig.cache
+c:\Users\chris\Documents\GitHub\AllcareProvider\CSharpCode\SendOrdersViaEmail\obj\Debug\net10.0\ref\SendOrdersViaEmail.dll
