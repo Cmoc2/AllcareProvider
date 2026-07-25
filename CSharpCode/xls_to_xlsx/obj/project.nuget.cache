@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "dgSpecHash": "JQOkq9nzvhg=",
+  "success": true,
+  "projectFilePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\chris\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\closedxml\\0.105.0\\closedxml.0.105.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\closedxml.parser\\2.0.0\\closedxml.parser.2.0.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\documentformat.openxml\\3.1.1\\documentformat.openxml.3.1.1.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\documentformat.openxml.framework\\3.1.1\\documentformat.openxml.framework.3.1.1.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\enums.net\\5.0.0\\enums.net.5.0.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\excelnumberformat\\1.1.0\\excelnumberformat.1.1.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\extendednumerics.bigdecimal\\2025.1001.2.129\\extendednumerics.bigdecimal.2025.1001.2.129.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\mathnet.numerics.signed\\5.0.0\\mathnet.numerics.signed.5.0.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\microsoft.build.tasks.git\\8.0.0\\microsoft.build.tasks.git.8.0.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\microsoft.io.recyclablememorystream\\3.0.1\\microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\microsoft.sourcelink.common\\8.0.0\\microsoft.sourcelink.common.8.0.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\microsoft.sourcelink.github\\8.0.0\\microsoft.sourcelink.github.8.0.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\npoi\\2.8.0\\npoi.2.8.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\rbush.signed\\4.0.0\\rbush.signed.4.0.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\sharpziplib\\1.4.2\\sharpziplib.1.4.2.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\sixlabors.fonts\\1.0.0\\sixlabors.fonts.1.0.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\skiasharp\\3.119.2\\skiasharp.3.119.2.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\skiasharp.nativeassets.linux.nodependencies\\3.119.2\\skiasharp.nativeassets.linux.nodependencies.3.119.2.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\skiasharp.nativeassets.macos\\3.119.2\\skiasharp.nativeassets.macos.3.119.2.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\skiasharp.nativeassets.win32\\3.119.2\\skiasharp.nativeassets.win32.3.119.2.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\system.io.packaging\\8.0.1\\system.io.packaging.8.0.1.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\system.security.cryptography.xml\\8.0.2\\system.security.cryptography.xml.8.0.2.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\zstring\\2.6.0\\zstring.2.6.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-23rf-6693-g89p",
+      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "warningLevel": 1,
+      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-37gx-xxp4-5rgx",
+      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "warningLevel": 1,
+      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-8q5v-6pqq-x66h",
+      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "warningLevel": 1,
+      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-cvvh-rhrc-wg4q",
+      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "warningLevel": 1,
+      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-g8r8-53c2-pm3f",
+      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "warningLevel": 1,
+      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-mmjf-rqrv-855v",
+      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "warningLevel": 1,
+      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-w3x6-4m5h-cxqf",
+      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "warningLevel": 1,
+      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
