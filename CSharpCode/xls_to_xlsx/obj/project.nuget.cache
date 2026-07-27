@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JQOkq9nzvhg=",
+  "dgSpecHash": "xZs0X6KYpd4=",
   "success": true,
-  "projectFilePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+  "projectFilePath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chris\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\closedxml\\0.105.0\\closedxml.0.105.0.nupkg.sha512",
@@ -35,9 +35,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-23rf-6693-g89p",
-      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "warningLevel": 1,
-      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "filePath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -47,9 +47,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-37gx-xxp4-5rgx",
-      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "warningLevel": 1,
-      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "filePath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -59,9 +59,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-8q5v-6pqq-x66h",
-      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "warningLevel": 1,
-      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "filePath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -71,9 +71,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-cvvh-rhrc-wg4q",
-      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "warningLevel": 1,
-      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "filePath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -83,9 +83,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-g8r8-53c2-pm3f",
-      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "warningLevel": 1,
-      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "filePath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -95,9 +95,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-mmjf-rqrv-855v",
-      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "warningLevel": 1,
-      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "filePath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -107,9 +107,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-w3x6-4m5h-cxqf",
-      "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "warningLevel": 1,
-      "filePath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+      "filePath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"

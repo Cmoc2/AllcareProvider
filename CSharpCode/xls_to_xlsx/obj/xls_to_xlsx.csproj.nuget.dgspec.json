@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj": {}
+    "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj": {}
   },
   "projects": {
-    "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj": {
+    "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+        "projectUniqueName": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
         "projectName": "xls_to_xlsx",
-        "projectPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
+        "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\xls_to_xlsx.csproj",
         "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\obj\\",
+        "outputPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\xls_to_xlsx\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
