@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\SendOrdersViaEmail\\SendOrdersViaEmail.csproj": {}
+    "C:\\Users\\ChristianOrtiz\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\SendOrdersViaEmail\\SendOrdersViaEmail.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\SendOrdersViaEmail\\SendOrdersViaEmail.csproj": {
+    "C:\\Users\\ChristianOrtiz\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\SendOrdersViaEmail\\SendOrdersViaEmail.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\SendOrdersViaEmail\\SendOrdersViaEmail.csproj",
+        "projectUniqueName": "C:\\Users\\ChristianOrtiz\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\SendOrdersViaEmail\\SendOrdersViaEmail.csproj",
         "projectName": "SendOrdersViaEmail",
-        "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\SendOrdersViaEmail\\SendOrdersViaEmail.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\SendOrdersViaEmail\\obj\\",
+        "projectPath": "C:\\Users\\ChristianOrtiz\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\SendOrdersViaEmail\\SendOrdersViaEmail.csproj",
+        "packagesPath": "C:\\Users\\ChristianOrtiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ChristianOrtiz\\Documents\\GitHub\\AllcareProvider\\CSharpCode\\SendOrdersViaEmail\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ChristianOrtiz\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"

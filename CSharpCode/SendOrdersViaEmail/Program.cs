@@ -43,8 +43,8 @@
 
         //Load previously saved SMTP credentials if they exist.
         string credentialsPath = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\Documents\Automations\Orders\smtp_credentials.txt");
-        string smtpUser = null;
-        string smtpPassword = null;
+        string? smtpUser = null;
+        string? smtpPassword = null;
 
         if (File.Exists(credentialsPath))
         {
@@ -84,7 +84,7 @@
 
             //Ask user if they want to save the credentials for future use.
             Console.Write("Do you want to save the SMTP credentials for future use? (y/n): ");
-            string saveCredentials = Console.ReadLine();
+            string? saveCredentials = Console.ReadLine();
             if (saveCredentials?.ToLower() == "y")
             {
                 //Here you would implement saving the encrypted credentials to a secure location.
@@ -94,6 +94,14 @@
                 Console.WriteLine($"SMTP credentials saved to: {credentialsPath}");
             }
         }
+
+        //New thread to check if Enter is pressed to exit the application
+        new Thread(() =>
+        {
+            Console.WriteLine("Press [enter] to exit.");
+            Console.ReadLine();
+            Environment.Exit(0);
+        }).Start();
 
         //For each PDF file already in the directory, process it, then move it to the output directory if it is not being used. Else, wait.
         foreach (var filePath in Directory.GetFiles(directoryPath, "*.pdf"))
@@ -105,13 +113,7 @@
             }
             ProcessFiles(filePath, smtpUser, smtpPassword);
         }
-                //New thread to check if Enter is pressed to exit the application
-        new Thread(() =>
-        {
-            Console.WriteLine("Press [enter] to exit.");
-            Console.ReadLine();
-            Environment.Exit(0);
-        }).Start();
+
 
         //Every 10 seconds, check the directory for new PDF files and process them. Exit when the user presses [enter].
         while (true)
@@ -144,6 +146,7 @@
                     client.UseDefaultCredentials = false;
 
                     var mailMessage = new System.Net.Mail.MailMessage();
+                    
                     mailMessage.From = new System.Net.Mail.MailAddress(smtpUser);
                     mailMessage.To.Add(recipientEmail);
                     mailMessage.Subject = subject;
@@ -153,6 +156,8 @@
                         mailMessage.Attachments.Add(new System.Net.Mail.Attachment(attachmentPath));
                     }
                     client.Send(mailMessage);
+                    mailMessage.Dispose();
+                    Console.WriteLine($"{subject} - Email sent successfully to {recipientEmail}");
                 }
                 
                 //Move the file to the output directory after sending the email
@@ -162,14 +167,30 @@
                 {
                     try
                     {
+                        //If the file already exists in the output directory, rename the file with a number suffix and try again
+                        if (File.Exists(destinationPath))
+                        {
+                            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(attachmentPaths[0]);
+                            string extension = Path.GetExtension(attachmentPaths[0]);
+                            int counter = 1;
+                            do
+                            {
+                                destinationPath = Path.Combine(outputDirectoryPath, $"{fileNameWithoutExtension}_{counter}{extension}");
+                                counter++;
+                            } while (File.Exists(destinationPath));
+                        }
+                        
+                        //Move the file to the output directory
                         File.Move(attachmentPaths[0], destinationPath);
                         Console.WriteLine($"File moved to: {destinationPath}");
                         fileMoved = true;
-                        Console.WriteLine($"{subject} - Email sent successfully to {recipientEmail}");
+                        
                     }
-                    catch (IOException)
+                    catch (IOException e)
                     {
-                        Console.WriteLine($"File {attachmentPaths[0]} is in use. Waiting...");
+                        
+                        Console.WriteLine($"Unable to move file. File {Path.GetFileName(attachmentPaths[0])} is in use. Retrying in 1 second...");
+                        Console.WriteLine(e.Message);
                         Thread.Sleep(1000);
                     }
                 }
@@ -195,8 +216,15 @@
 
         }
 
-        void ProcessFiles(string filePath, string smtpUser, string smtpPassword)
+        void ProcessFiles(string filePath, string? smtpUser, string? smtpPassword)
         {
+            //Ensure there is a non-null smtpUser and smtpPassword before proceeding
+            if (string.IsNullOrWhiteSpace(smtpUser) || string.IsNullOrWhiteSpace(smtpPassword))
+            {
+                Console.WriteLine("SMTP credentials are required.");
+                Environment.Exit(1);
+            }
+
             //Extract the patient's name from the filename, regex "^(.*?)(\d{8})", if unable, name is Unknown
             string fileName = Path.GetFileNameWithoutExtension(filePath);
             var match = System.Text.RegularExpressions.Regex.Match(fileName, @"^(.*?)(\d{8})");
@@ -205,8 +233,14 @@
 
             //Determine the recipient email based on the file name pattern
             string recipientEmail = emailMappings.FirstOrDefault(mapping => fileName.Contains(mapping.Key)).Value;
+
+            //If "- Test" is found in the file name, set the recipient email to a specific address
+            if (fileName.Contains("- Test"))
+            {
+                //Do Nothing, as the recipient email is already set to the test email address in the emailMappings dictionary
+            } 
             //If (ECAH) is found in the file name, set the recipient email to a specific address
-            if (fileName.Contains("ECAH"))
+            else if (fileName.Contains("ECAH"))
             {
                 recipientEmail = "ecah@allcareprovider.com";
             }
