@@ -95,6 +95,21 @@
             }
         }
 
+        //Load footer info from footer.txt if it exists, else set to empty string
+        string footerPath = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\Documents\Automations\Orders\footer.txt");
+        string footerInfo = "<br><br>Thank you!";
+
+        if (File.Exists(footerPath))
+        {
+            footerInfo = File.ReadAllText(footerPath);
+            Console.WriteLine($"Loaded footer info from: {footerPath}");
+        }
+        else
+        {
+            Console.WriteLine("No footer info found. Footer file created.");
+            File.WriteAllText(footerPath, footerInfo);
+        }
+
         //New thread to check if Enter is pressed to exit the application
         new Thread(() =>
         {
@@ -133,7 +148,7 @@
         
             Console.WriteLine($"Sending email to: {recipientEmail}");
 
-            // Here you would implement the actual SMTP email sending logic using the smtpServer, smtpPort, smtpUser, and smtpPassword credentials.
+            //implement the actual SMTP email sending logic using the smtpServer, smtpPort, smtpUser, and smtpPassword credentials.
             //Catch Exceptions 
             try
             {
@@ -150,7 +165,9 @@
                     mailMessage.From = new System.Net.Mail.MailAddress(smtpUser);
                     mailMessage.To.Add(recipientEmail);
                     mailMessage.Subject = subject;
-                    mailMessage.Body = body;
+                    mailMessage.Body = body + footerInfo;
+                    //mailMessage.IsBodyHtml = true;
+
                     foreach (var attachmentPath in attachmentPaths)
                     {
                         mailMessage.Attachments.Add(new System.Net.Mail.Attachment(attachmentPath));
@@ -257,22 +274,23 @@
                 }
             }
             //Set the subject and body for the email and send the email with the determined subject and body
+            //Append "Thank you!" to the body of the email with bold formatting.
             if(fileName.Contains("ROC Order"))
             {
                 string subject = $"ROC Order for {patientName}";
-                string body = $"Please find attached the ROC order for {patientName}.";
+                string body = $"The ROC order for {patientName} is attached.";
                 send_email(recipientEmail, subject, body, new string[] { filePath }, smtpUser, smtpPassword);
             }
             else if(fileName.Contains("Order -"))
             {
                 string subject = $"Order for {patientName}";
-                string body = $"Please find attached the order for {patientName}.";
+                string body = $"The order for {patientName} is attached.";
                 send_email(recipientEmail, subject, body, new string[] { filePath }, smtpUser, smtpPassword);
             }
             else
             {
                 string subject = $"File: {patientName}";
-                string body = $"Please find attached the order for {patientName}.";
+                string body = $"The file for {patientName} is attached.";
                 send_email(recipientEmail, subject, body, new string[] { filePath }, smtpUser, smtpPassword);
             }
         }
