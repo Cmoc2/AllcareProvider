@@ -165,7 +165,7 @@
                     mailMessage.From = new System.Net.Mail.MailAddress(smtpUser);
                     mailMessage.To.Add(recipientEmail);
                     mailMessage.Subject = subject;
-                    mailMessage.Body = body + footerInfo;
+                    mailMessage.Body = body + '\n' + '\n' + footerInfo;
                     //mailMessage.IsBodyHtml = true;
 
                     foreach (var attachmentPath in attachmentPaths)
